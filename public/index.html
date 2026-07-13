@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nyereményjáték – Autókozmetika</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="stripe"></div>
+<main class="page">
+  <header class="hero">
+    <div class="hero-badge">🚗💧✨</div>
+    <h1>Ragyogjon az autód – nyerj velünk!</h1>
+    <p>Töltsd ki az alábbi rövid kérdőívet az autómosási szokásaidról, és vegyél részt nyereményjátékunkban!</p>
+  </header>
+
+  <form id="entry-form" novalidate>
+    <section class="card">
+      <h2>Személyes adatok</h2>
+
+      <div class="field">
+        <label for="name">Név <span class="required">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
+        <p class="error" data-error-for="name"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail cím <span class="required">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+        <p class="error" data-error-for="email"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Kérdések</h2>
+      <p class="hint">Az alábbi kérdések jelenleg minta (placeholder) tartalmak az autómosási szokásokról — cseréld le, ha szükséges.</p>
+
+      <!-- 1 -->
+      <fieldset class="question" data-question="1">
+        <legend>1. Milyen gyakran mosatod az autódat? <span class="required">*</span></legend>
+        <label><input type="radio" name="q1" value="Hetente" required> Hetente</label>
+        <label><input type="radio" name="q1" value="Havonta 1-2 alkalommal"> Havonta 1-2 alkalommal</label>
+        <label><input type="radio" name="q1" value="Néhány havonta"> Néhány havonta</label>
+        <label><input type="radio" name="q1" value="Csak ha nagyon szükséges"> Csak ha nagyon szükséges</label>
+        <p class="error" data-error-for="q1"></p>
+      </fieldset>
+
+      <!-- 2 -->
+      <fieldset class="question" data-question="2">
+        <legend>2. Hol szoktad mosatni az autódat? <span class="required">*</span></legend>
+        <label><input type="radio" name="q2" value="Kézi autómosóban" required> Kézi autómosóban</label>
+        <label><input type="radio" name="q2" value="Gépi (automata) mosóban"> Gépi (automata) mosóban</label>
+        <label><input type="radio" name="q2" value="Otthon, saját magam"> Otthon, saját magam</label>
+        <label><input type="radio" name="q2" value="Nem szoktam mosatni"> Nem szoktam mosatni</label>
+        <p class="error" data-error-for="q2"></p>
+      </fieldset>
+
+      <!-- 3 -->
+      <fieldset class="question" data-question="3">
+        <legend>3. Mennyit költesz átlagosan egy autómosásra? <span class="required">*</span></legend>
+        <label><input type="radio" name="q3" value="0-2000 Ft" required> 0-2000 Ft</label>
+        <label><input type="radio" name="q3" value="2000-5000 Ft"> 2000-5000 Ft</label>
+        <label><input type="radio" name="q3" value="5000-10000 Ft"> 5000-10000 Ft</label>
+        <label><input type="radio" name="q3" value="10000 Ft felett"> 10000 Ft felett</label>
+        <p class="error" data-error-for="q3"></p>
+      </fieldset>
+
+      <!-- 4 -->
+      <fieldset class="question" data-question="4">
+        <legend>4. Szoktad-e a belső teret is takaríttatni/takarítani mosáskor? <span class="required">*</span></legend>
+        <label><input type="radio" name="q4" value="Mindig" required> Mindig</label>
+        <label><input type="radio" name="q4" value="Gyakran"> Gyakran</label>
+        <label><input type="radio" name="q4" value="Ritkán"> Ritkán</label>
+        <label><input type="radio" name="q4" value="Soha"> Soha</label>
+        <p class="error" data-error-for="q4"></p>
+      </fieldset>
+
+      <!-- 5 -->
+      <fieldset class="question" data-question="5">
+        <legend>5. Használsz-e viasz- vagy kerámiabevonatot az autódon? <span class="required">*</span></legend>
+        <label><input type="radio" name="q5" value="Igen, rendszeresen" required> Igen, rendszeresen</label>
+        <label><input type="radio" name="q5" value="Igen, néha"> Igen, néha</label>
+        <label><input type="radio" name="q5" value="Még nem, de érdekelne"> Még nem, de érdekelne</label>
+        <label><input type="radio" name="q5" value="Nem érdekel"> Nem érdekel</label>
+        <p class="error" data-error-for="q5"></p>
+      </fieldset>
+
+      <!-- 6 -->
+      <fieldset class="question" data-question="6">
+        <legend>6. Igénybe vettél már kárpittisztítást vagy poliírozást? <span class="required">*</span></legend>
+        <label><input type="radio" name="q6" value="Igen, rendszeresen" required> Igen, rendszeresen</label>
+        <label><input type="radio" name="q6" value="Igen, egyszer-kétszer"> Igen, egyszer-kétszer</label>
+        <label><input type="radio" name="q6" value="Még nem, de kipróbálnám"> Még nem, de kipróbálnám</label>
+        <label><input type="radio" name="q6" value="Nem érdekel"> Nem érdekel</label>
+        <p class="error" data-error-for="q6"></p>
+      </fieldset>
+
+      <!-- 7 -->
+      <fieldset class="question" data-question="7">
+        <legend>7. Mi alapján választasz autómosót/autókozmetikát? <span class="required">*</span></legend>
+        <label><input type="radio" name="q7" value="Ár" required> Ár</label>
+        <label><input type="radio" name="q7" value="Minőség"> Minőség</label>
+        <label><input type="radio" name="q7" value="Közelség, kényelem"> Közelség, kényelem</label>
+        <label><input type="radio" name="q7" value="Gyorsaság"> Gyorsaság</label>
+        <p class="error" data-error-for="q7"></p>
+      </fieldset>
+
+      <!-- 8 -->
+      <fieldset class="question" data-question="8">
+        <legend>8. Fontos-e számodra a környezetbarát (víztakarékos, vegyszermentes) autómosás? <span class="required">*</span></legend>
+        <label><input type="radio" name="q8" value="Igen, nagyon fontos" required> Igen, nagyon fontos</label>
+        <label><input type="radio" name="q8" value="Kicsit számít"> Kicsit számít</label>
+        <label><input type="radio" name="q8" value="Nem igazán számít"> Nem igazán számít</label>
+        <label><input type="radio" name="q8" value="Nem foglalkozom vele"> Nem foglalkozom vele</label>
+        <p class="error" data-error-for="q8"></p>
+      </fieldset>
+
+      <!-- 9 -->
+      <fieldset class="question" data-question="9">
+        <legend>9. Szoktál-e előre időpontot foglalni autómosásra/kozmetikára? <span class="required">*</span></legend>
+        <label><input type="radio" name="q9" value="Igen, mindig" required> Igen, mindig</label>
+        <label><input type="radio" name="q9" value="Igen, ha van rá lehetőség"> Igen, ha van rá lehetőség</label>
+        <label><input type="radio" name="q9" value="Nem, csak beugrom"> Nem, csak beugrom</label>
+        <label><input type="radio" name="q9" value="Nem tudtam, hogy lehet"> Nem tudtam, hogy lehet</label>
+        <p class="error" data-error-for="q9"></p>
+      </fieldset>
+
+      <!-- 10 -->
+      <fieldset class="question" data-question="10">
+        <legend>10. Honnan értesülsz szívesen egy autókozmetika akcióiról? <span class="required">*</span></legend>
+        <label><input type="radio" name="q10" value="Közösségi média (Facebook, Instagram)" required> Közösségi média (Facebook, Instagram)</label>
+        <label><input type="radio" name="q10" value="E-mail hírlevél"> E-mail hírlevél</label>
+        <label><input type="radio" name="q10" value="Ismerős ajánlása"> Ismerős ajánlása</label>
+        <label><input type="radio" name="q10" value="Helyszíni plakát, szórólap"> Helyszíni plakát, szórólap</label>
+        <p class="error" data-error-for="q10"></p>
+      </fieldset>
+    </section>
+
+    <section class="card">
+      <div class="field checkbox-field">
+        <label>
+          <input type="checkbox" id="privacy" name="privacy" required />
+          Elolvastam és elfogadom az <button type="button" class="link-button" id="open-privacy">adatvédelmi tájékoztatót</button>. <span class="required">*</span>
+        </label>
+        <p class="error" data-error-for="privacy"></p>
+      </div>
+
+      <button type="submit" id="submit-btn">Beküldés</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </section>
+  </form>
+
+  <!--
+    FONTOS (nem jelenik meg a látogatóknak): a szögletes zárójeles [ ... ] részeket
+    a tényleges cégadatokkal kell kitölteni, mielőtt az oldal éles, valós személyes
+    adatokat gyűjtő üzemmódba kerül.
+  -->
+  <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-notice-heading">
+    <div class="privacy-dialog-header">
+      <h2 id="privacy-notice-heading">Adatvédelmi tájékoztató</h2>
+      <button type="button" class="dialog-close" id="close-privacy" aria-label="Bezárás">&times;</button>
+    </div>
+    <div class="privacy-dialog-body">
+    <p>
+      Jelen tájékoztató a <strong>[CÉGNÉV]</strong> (a továbbiakban: „Szervező" vagy „Adatkezelő")
+      által szervezett „[NYEREMÉNYJÁTÉK NEVE]" elnevezésű nyereményjátékkal (a továbbiakban:
+      „Nyereményjáték") összefüggő személyesadat-kezelésről nyújt tájékoztatást az Európai
+      Parlament és a Tanács (EU) 2016/679 rendelete (általános adatvédelmi rendelet, „GDPR"), és az
+      információs önrendelkezési jogról és az információszabadságról szóló 2011. évi CXII. törvény
+      („Infotv.") alapján.
+    </p>
+
+    <h3>1. Az adatkezelő adatai</h3>
+    <ul>
+      <li>Név: [CÉGNÉV]</li>
+      <li>Székhely: [SZÉKHELY CÍME]</li>
+      <li>Cégjegyzékszám: [CÉGJEGYZÉKSZÁM]</li>
+      <li>Adószám: [ADÓSZÁM]</li>
+      <li>E-mail: [KAPCSOLATI E-MAIL]</li>
+      <li>Telefon: [KAPCSOLATI TELEFONSZÁM]</li>
+    </ul>
+
+    <h3>2. A kezelt személyes adatok köre</h3>
+    <ul>
+      <li>Név</li>
+      <li>E-mail cím</li>
+      <li>A kérdőívre adott válaszok (autómosási szokásokra vonatkozó felmérés)</li>
+      <li>A beküldés időpontja</li>
+    </ul>
+
+    <h3>3. Az adatkezelés célja</h3>
+    <p>
+      A Szervező a fenti adatokat az alábbi célokból kezeli: a Nyereményjátékban való részvétel
+      biztosítása és nyilvántartása; a nyertes(ek) sorsolása, azonosítása és értesítése; valamint a
+      beküldött válaszok statisztikai, összesített (anonimizált) feldolgozása a Szervező
+      szolgáltatásainak fejlesztése érdekében. Az adatokat a Szervező más céllal — így különösen
+      közvetlen üzletszerzési (marketing) célra — kizárólag az érintett külön, önálló
+      hozzájárulása esetén, elkülönített jogalapon kezeli.
+    </p>
+
+    <h3>4. Az adatkezelés jogalapja</h3>
+    <p>
+      Az adatkezelés jogalapja a GDPR 6. cikk (1) bekezdés a) pontja szerinti önkéntes
+      hozzájárulás, amelyet az érintett a jelen tájékoztató elfogadásával és az űrlap kitöltésével
+      ad meg. A hozzájárulás bármikor, indokolás nélkül visszavonható; a visszavonás nem érinti a
+      visszavonás előtt, a hozzájárulás alapján végzett adatkezelés jogszerűségét.
+    </p>
+
+    <h3>5. Az adatkezelés időtartama</h3>
+    <p>
+      A Szervező a megadott személyes adatokat a Nyereményjáték lezárását és a nyertes(ek) részére
+      történő nyeremény átadását követő [MEGŐRZÉSI IDŐ, pl. 30 nap]-ig kezeli, ezt követően azokat
+      törli — kivéve, ha jogszabály ettől eltérő megőrzési kötelezettséget ír elő (pl. számviteli
+      bizonylathoz kapcsolódó adat esetén 8 év).
+    </p>
+
+    <h3>6. Adatfeldolgozók, adattovábbítás</h3>
+    <p>
+      A megadott adatokhoz a Szervező erre feljogosított munkatársai, valamint az alábbi
+      adatfeldolgozó(k) férhetnek hozzá, kizárólag a Nyereményjáték lebonyolításához szükséges
+      mértékben: [TÁRHELYSZOLGÁLTATÓ / EGYÉB ADATFELDOLGOZÓ NEVE ÉS ELÉRHETŐSÉGE]. A Szervező az
+      adatokat harmadik fél részére — jogszabályi kötelezettség teljesítésének esetét kivéve —
+      nem adja tovább.
+    </p>
+
+    <h3>7. A nyertes nyilvánosságra hozatala</h3>
+    <p>
+      Nyertesség esetén a Szervező a nyertes nevét a weboldalán és/vagy közösségimédia-felületén
+      közzéteheti. Amennyiben az érintett ehhez nem járul hozzá, kérjük, jelezze ezt a
+      [KAPCSOLATI E-MAIL] címen a nyeremény átvétele előtt.
+    </p>
+
+    <h3>8. Az érintett jogai</h3>
+    <p>Az érintett a rá vonatkozó személyes adatokkal kapcsolatban jogosult:</p>
+    <ul>
+      <li>tájékoztatást kérni az adatkezelésről;</li>
+      <li>hozzáférést kérni a kezelt adatokhoz;</li>
+      <li>kérni az adatok helyesbítését, törlését vagy kezelésének korlátozását;</li>
+      <li>tiltakozni az adatkezelés ellen;</li>
+      <li>élni az adathordozhatósághoz való jogával;</li>
+      <li>hozzájárulását bármikor, indokolás nélkül visszavonni.</li>
+    </ul>
+    <p>
+      A jogok gyakorlásával kapcsolatos kérelmeket a [KAPCSOLATI E-MAIL] címre lehet benyújtani. A
+      Szervező a kérelmet a beérkezésétől számított legfeljebb 1 hónapon belül teljesíti.
+    </p>
+
+    <h3>9. Jogorvoslati lehetőségek</h3>
+    <p>
+      Amennyiben az érintett úgy ítéli meg, hogy adatai kezelésével összefüggésben jogsérelem érte,
+      panasszal fordulhat a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH):
+    </p>
+    <ul>
+      <li>Cím: 1055 Budapest, Falk Miksa utca 9-11.</li>
+      <li>Postacím: 1363 Budapest, Pf. 9.</li>
+      <li>Telefon: +36 (1) 391-1400</li>
+      <li>E-mail: ugyfelszolgalat@naih.hu</li>
+      <li>Honlap: www.naih.hu</li>
+    </ul>
+    <p>
+      Az érintett jogosult továbbá jogai megsértése esetén bírósághoz is fordulni; a per elbírálása
+      a törvényszék hatáskörébe tartozik, és az érintett választása szerint a lakóhelye vagy
+      tartózkodási helye szerinti törvényszék előtt is megindítható.
+    </p>
+
+    <h3>10. Az adatszolgáltatás önkéntessége</h3>
+    <p>
+      A Nyereményjátékban való részvételhez szükséges adatok megadása önkéntes, azonban ezek
+      hiányában a részvétel nem lehetséges.
+    </p>
+    </div>
+  </dialog>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.claude/settings.local.json
+logs/
+node_modules/
+data/submissions.json
+
+# Testelői eszközkészlet - nem ehhez a repóhoz tartozik
+.claude/
+.mcp.json
+.playwright-mcp/
+CLAUDE.md

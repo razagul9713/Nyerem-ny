@@ -1,0 +1,328 @@
+:root {
+  --color-bg: #0b0f14;
+  --color-bg-alt: #10161d;
+  --color-card: #151c25;
+  --color-text: #eef2f6;
+  --color-muted: #94a3b8;
+  --color-primary: #22d3ee;
+  --color-primary-dark: #0891b2;
+  --color-accent: #f97316;
+  --color-accent-dark: #c2410c;
+  --color-error: #f87171;
+  --color-border: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(34, 211, 238, 0.16), transparent 60%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+.stripe {
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-accent) 0 24px,
+    var(--color-primary) 24px 48px
+  );
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hero-badge {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.35));
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  border-left: 4px solid var(--color-primary);
+  padding-left: 10px;
+}
+
+.privacy-dialog-body h3 {
+  color: var(--color-primary);
+  font-size: 1.02rem;
+  margin: 20px 0 8px;
+}
+
+.privacy-dialog-body h3:first-of-type {
+  margin-top: 8px;
+}
+
+.privacy-dialog-body ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--color-muted);
+}
+
+.privacy-dialog-body li {
+  margin-bottom: 4px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: -8px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input[type="text"],
+.field input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.field input[type="text"]::placeholder,
+.field input[type="email"]::placeholder {
+  color: var(--color-muted);
+}
+
+.field input[type="text"]:focus,
+.field input[type="email"]:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.required {
+  color: var(--color-accent);
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin: 6px 0 0;
+  min-height: 1em;
+}
+
+fieldset.question {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0 0 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+fieldset.question legend {
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+fieldset.question label {
+  display: block;
+  padding: 6px 4px;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.12s ease;
+}
+
+fieldset.question label:hover {
+  background: rgba(34, 211, 238, 0.08);
+}
+
+fieldset.question input[type="radio"] {
+  margin-right: 8px;
+  accent-color: var(--color-primary);
+}
+
+fieldset.question.invalid {
+  border-color: var(--color-error);
+}
+
+.checkbox-field label {
+  font-weight: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--color-primary);
+}
+
+.checkbox-field a {
+  color: var(--color-primary);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: var(--color-accent);
+}
+
+dialog.privacy-dialog {
+  border: none;
+  padding: 0;
+  width: min(640px, 92vw);
+  max-height: 85vh;
+  background: var(--color-card);
+  color: var(--color-text);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+dialog.privacy-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+dialog.privacy-dialog::backdrop {
+  background: rgba(4, 8, 12, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+.privacy-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  flex: none;
+}
+
+.privacy-dialog-header h2 {
+  margin: 0;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.dialog-close {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.dialog-close:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.privacy-dialog-body {
+  padding: 20px 24px 24px;
+  overflow-y: auto;
+}
+
+button#submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-accent));
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  color: #04151a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-position 0.35s ease, transform 0.1s ease;
+}
+
+button#submit-btn:hover:not(:disabled) {
+  background-position: 100% 0%;
+}
+
+button#submit-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button#submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  text-align: center;
+  margin: 12px 0 0;
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: var(--color-primary);
+}
+
+.form-status.error {
+  color: var(--color-error);
+}
+
+.privacy-dialog-body p {
+  color: var(--color-muted);
+  line-height: 1.55;
+}

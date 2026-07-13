@@ -1,0 +1,10 @@
+{
+  "name": "nyeremenyjatek",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nyereményjáték publikus űrlap - autómosási szokások kérdőívvel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
