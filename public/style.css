@@ -1,32 +1,41 @@
 :root {
-  --color-bg: #0b0f14;
-  --color-bg-alt: #10161d;
-  --color-card: #151c25;
-  --color-text: #eef2f6;
-  --color-muted: #94a3b8;
-  --color-primary: #22d3ee;
-  --color-primary-dark: #0891b2;
-  --color-accent: #f97316;
+  --color-bg: #e9ecf0;
+  --color-bg-alt: #dde2e8;
+  --color-card: #ffffff;
+  --color-text: #1c2530;
+  --color-muted: #5b6472;
+  --color-primary: #0891b2;
+  --color-primary-dark: #0e7490;
+  --color-accent: #ea580c;
   --color-accent-dark: #c2410c;
-  --color-error: #f87171;
-  --color-border: rgba(255, 255, 255, 0.09);
+  --color-error: #dc2626;
+  --color-border: rgba(15, 23, 42, 0.1);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background:
-    radial-gradient(1200px 500px at 50% -10%, rgba(34, 211, 238, 0.16), transparent 60%),
+    radial-gradient(1200px 500px at 50% -10%, rgba(8, 145, 178, 0.1), transparent 60%),
     linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   color: var(--color-text);
   min-height: 100vh;
+  position: relative;
 }
 
 .stripe {
+  position: relative;
+  z-index: 1;
   height: 6px;
   background: repeating-linear-gradient(
     -45deg,
@@ -35,10 +44,123 @@ body {
   );
 }
 
+.bg-logos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-logo {
+  position: absolute;
+  opacity: 0.24;
+  filter: saturate(0.9);
+}
+
+.bg-logo--birodalom {
+  width: 340px;
+  max-width: 42vw;
+}
+
+.bg-logo--saman-badge {
+  width: 230px;
+  max-width: 32vw;
+}
+
+.bg-logo--saman-word {
+  width: 300px;
+  max-width: 40vw;
+}
+
+/* left side, top to bottom */
+.bg-logo--birodalom-left {
+  top: 4%;
+  left: -55px;
+  opacity: 0.2;
+  transform: rotate(-8deg);
+}
+
+.bg-logo--saman-badge-left {
+  top: 40%;
+  left: -25px;
+  width: 210px;
+  opacity: 0.18;
+  transform: rotate(-6deg);
+}
+
+.bg-logo--saman-word-left {
+  bottom: 5%;
+  left: -35px;
+  opacity: 0.17;
+  transform: rotate(4deg);
+}
+
+/* right side, top to bottom */
+.bg-logo--saman-badge-right {
+  top: 5%;
+  right: -30px;
+  width: 240px;
+  opacity: 0.2;
+  transform: rotate(8deg);
+}
+
+.bg-logo--saman-word-right {
+  top: 40%;
+  right: -40px;
+  opacity: 0.17;
+  transform: rotate(-4deg);
+}
+
+.bg-logo--birodalom-right {
+  bottom: 6%;
+  right: -55px;
+  opacity: 0.18;
+  transform: rotate(6deg);
+}
+
+@media (max-width: 640px) {
+  .bg-logo--birodalom {
+    width: 220px;
+  }
+  .bg-logo--saman-badge {
+    width: 150px;
+  }
+  .bg-logo--saman-word {
+    width: 190px;
+  }
+  .bg-logo--saman-badge-left,
+  .bg-logo--saman-word-right {
+    display: none;
+  }
+  .bg-logo--birodalom-left {
+    top: 1%;
+    left: -40px;
+  }
+  .bg-logo--saman-word-left {
+    bottom: 24%;
+    left: -30px;
+  }
+  .bg-logo--saman-badge-right {
+    top: 1%;
+    right: -20px;
+  }
+  .bg-logo--birodalom-right {
+    bottom: 6%;
+    right: -40px;
+  }
+}
+
 .page {
+  position: relative;
+  z-index: 1;
   max-width: 720px;
   margin: 0 auto;
   padding: 40px 16px 64px;
+  box-sizing: border-box;
 }
 
 .hero {
@@ -49,7 +171,7 @@ body {
 .hero-badge {
   font-size: 2rem;
   margin-bottom: 8px;
-  filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.35));
+  filter: drop-shadow(0 0 12px rgba(8, 145, 178, 0.25));
 }
 
 .hero h1 {
@@ -73,7 +195,7 @@ body {
   border-radius: 14px;
   padding: 24px;
   margin-bottom: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
 }
 
 .card h2 {
@@ -158,7 +280,7 @@ fieldset.question {
   border-radius: 10px;
   padding: 14px 16px;
   margin: 0 0 16px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(15, 23, 42, 0.02);
 }
 
 fieldset.question legend {
@@ -176,7 +298,7 @@ fieldset.question label {
 }
 
 fieldset.question label:hover {
-  background: rgba(34, 211, 238, 0.08);
+  background: rgba(8, 145, 178, 0.08);
 }
 
 fieldset.question input[type="radio"] {
@@ -270,7 +392,7 @@ dialog.privacy-dialog::backdrop {
 
 .dialog-close:hover {
   color: var(--color-text);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(15, 23, 42, 0.06);
 }
 
 .privacy-dialog-body {

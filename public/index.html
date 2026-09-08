@@ -7,11 +7,19 @@
 <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+<div class="bg-logos" aria-hidden="true">
+  <img class="bg-logo bg-logo--birodalom bg-logo--birodalom-left" src="/assets/autobirodalom-logo.svg" alt="" />
+  <img class="bg-logo bg-logo--birodalom bg-logo--birodalom-right" src="/assets/autobirodalom-logo.svg" alt="" />
+  <img class="bg-logo bg-logo--saman-badge bg-logo--saman-badge-left" src="/assets/autosaman-badge.png" alt="" />
+  <img class="bg-logo bg-logo--saman-badge bg-logo--saman-badge-right" src="/assets/autosaman-badge.png" alt="" />
+  <img class="bg-logo bg-logo--saman-word bg-logo--saman-word-left" src="/assets/autosaman-wordmark.png" alt="" />
+  <img class="bg-logo bg-logo--saman-word bg-logo--saman-word-right" src="/assets/autosaman-wordmark.png" alt="" />
+</div>
 <div class="stripe"></div>
 <main class="page">
   <header class="hero">
     <div class="hero-badge">🚗💧✨</div>
-    <h1>Ragyogjon az autód – nyerj velünk!</h1>
+    <h1>AUTÓBIRODALOM X AUTÓSÁMÁN<br />Közös nyereményjáték</h1>
     <p>Töltsd ki az alábbi rövid kérdőívet az autómosási szokásaidról, és vegyél részt nyereményjátékunkban!</p>
   </header>
 
@@ -38,7 +46,7 @@
 
       <!-- 1 -->
       <fieldset class="question" data-question="1">
-        <legend>1. Milyen gyakran mosatod az autódat? <span class="required">*</span></legend>
+        <legend>1. Milyen gyakran mosod az autódat? <span class="required">*</span></legend>
         <label><input type="radio" name="q1" value="Hetente" required> Hetente</label>
         <label><input type="radio" name="q1" value="Havonta 1-2 alkalommal"> Havonta 1-2 alkalommal</label>
         <label><input type="radio" name="q1" value="Néhány havonta"> Néhány havonta</label>
@@ -48,17 +56,17 @@
 
       <!-- 2 -->
       <fieldset class="question" data-question="2">
-        <legend>2. Hol szoktad mosatni az autódat? <span class="required">*</span></legend>
-        <label><input type="radio" name="q2" value="Kézi autómosóban" required> Kézi autómosóban</label>
-        <label><input type="radio" name="q2" value="Gépi (automata) mosóban"> Gépi (automata) mosóban</label>
-        <label><input type="radio" name="q2" value="Otthon, saját magam"> Otthon, saját magam</label>
-        <label><input type="radio" name="q2" value="Nem szoktam mosatni"> Nem szoktam mosatni</label>
+        <legend>2. Hol szoktad mosni az autódat? <span class="required">*</span></legend>
+        <label><input type="radio" name="q2" value="Önkiszolgáló autómosó" required> Önkiszolgáló autómosó</label>
+        <label><input type="radio" name="q2" value="Gépi autómosó"> Gépi autómosó</label>
+        <label><input type="radio" name="q2" value="Autókozmetikába viszem"> Autókozmetikába viszem</label>
+        <label><input type="radio" name="q2" value="Otthon saját magamnak"> Otthon saját magamnak</label>
         <p class="error" data-error-for="q2"></p>
       </fieldset>
 
       <!-- 3 -->
       <fieldset class="question" data-question="3">
-        <legend>3. Mennyit költesz átlagosan egy autómosásra? <span class="required">*</span></legend>
+        <legend>3. Mennyit költesz átlagosan egy autómosásra alkalmanként? <span class="required">*</span></legend>
         <label><input type="radio" name="q3" value="0-2000 Ft" required> 0-2000 Ft</label>
         <label><input type="radio" name="q3" value="2000-5000 Ft"> 2000-5000 Ft</label>
         <label><input type="radio" name="q3" value="5000-10000 Ft"> 5000-10000 Ft</label>
@@ -68,41 +76,41 @@
 
       <!-- 4 -->
       <fieldset class="question" data-question="4">
-        <legend>4. Szoktad-e a belső teret is takaríttatni/takarítani mosáskor? <span class="required">*</span></legend>
-        <label><input type="radio" name="q4" value="Mindig" required> Mindig</label>
-        <label><input type="radio" name="q4" value="Gyakran"> Gyakran</label>
-        <label><input type="radio" name="q4" value="Ritkán"> Ritkán</label>
-        <label><input type="radio" name="q4" value="Soha"> Soha</label>
+        <legend>4. Milyen gyakran szoktad belül takarítani az autódat? <span class="required">*</span></legend>
+        <label><input type="radio" name="q4" value="Hetente" required> Hetente</label>
+        <label><input type="radio" name="q4" value="Havonta 1-2 alkalommal"> Havonta 1-2 alkalommal</label>
+        <label><input type="radio" name="q4" value="Néhány havonta"> Néhány havonta</label>
+        <label><input type="radio" name="q4" value="Csak ha nagyon szükséges"> Csak ha nagyon szükséges</label>
         <p class="error" data-error-for="q4"></p>
       </fieldset>
 
       <!-- 5 -->
       <fieldset class="question" data-question="5">
-        <legend>5. Használsz-e viasz- vagy kerámiabevonatot az autódon? <span class="required">*</span></legend>
-        <label><input type="radio" name="q5" value="Igen, rendszeresen" required> Igen, rendszeresen</label>
-        <label><input type="radio" name="q5" value="Igen, néha"> Igen, néha</label>
-        <label><input type="radio" name="q5" value="Még nem, de érdekelne"> Még nem, de érdekelne</label>
-        <label><input type="radio" name="q5" value="Nem érdekel"> Nem érdekel</label>
+        <legend>5. Hol szoktad belül takarítani az autódat? <span class="required">*</span></legend>
+        <label><input type="radio" name="q5" value="Önkiszolgáló autómosó" required> Önkiszolgáló autómosó</label>
+        <label><input type="radio" name="q5" value="Gépi autómosó"> Gépi autómosó</label>
+        <label><input type="radio" name="q5" value="Autókozmetikába viszem"> Autókozmetikába viszem</label>
+        <label><input type="radio" name="q5" value="Otthon saját magamnak"> Otthon saját magamnak</label>
         <p class="error" data-error-for="q5"></p>
       </fieldset>
 
       <!-- 6 -->
       <fieldset class="question" data-question="6">
-        <legend>6. Igénybe vettél már kárpittisztítást vagy poliírozást? <span class="required">*</span></legend>
-        <label><input type="radio" name="q6" value="Igen, rendszeresen" required> Igen, rendszeresen</label>
-        <label><input type="radio" name="q6" value="Igen, egyszer-kétszer"> Igen, egyszer-kétszer</label>
-        <label><input type="radio" name="q6" value="Még nem, de kipróbálnám"> Még nem, de kipróbálnám</label>
-        <label><input type="radio" name="q6" value="Nem érdekel"> Nem érdekel</label>
+        <legend>6. Mennyit költesz átlagosan belső takarításra alkalmanként? <span class="required">*</span></legend>
+        <label><input type="radio" name="q6" value="0-2000 Ft" required> 0-2000 Ft</label>
+        <label><input type="radio" name="q6" value="2000-5000 Ft"> 2000-5000 Ft</label>
+        <label><input type="radio" name="q6" value="5000-10000 Ft"> 5000-10000 Ft</label>
+        <label><input type="radio" name="q6" value="10000 Ft felett"> 10000 Ft felett</label>
         <p class="error" data-error-for="q6"></p>
       </fieldset>
 
       <!-- 7 -->
       <fieldset class="question" data-question="7">
-        <legend>7. Mi alapján választasz autómosót/autókozmetikát? <span class="required">*</span></legend>
-        <label><input type="radio" name="q7" value="Ár" required> Ár</label>
-        <label><input type="radio" name="q7" value="Minőség"> Minőség</label>
-        <label><input type="radio" name="q7" value="Közelség, kényelem"> Közelség, kényelem</label>
-        <label><input type="radio" name="q7" value="Gyorsaság"> Gyorsaság</label>
+        <legend>7. Honnan szerzed be az autóápolási termékeket az autódhoz? <span class="required">*</span></legend>
+        <label><input type="radio" name="q7" value="Weben rendelek" required> Weben rendelek</label>
+        <label><input type="radio" name="q7" value="Minőségi termékeket vásárolok autóápolási szaküzletben"> Minőségi termékeket vásárolok autóápolási szaküzletben</label>
+        <label><input type="radio" name="q7" value="Olcsóbb termékeket vásárolok áruházláncok polcairól"> Olcsóbb termékeket vásárolok áruházláncok polcairól</label>
+        <label><input type="radio" name="q7" value="Nem használok autókozmetikai termékeket"> Nem használok autókozmetikai termékeket</label>
         <p class="error" data-error-for="q7"></p>
       </fieldset>
 
