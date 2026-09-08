@@ -226,12 +226,6 @@ body {
   margin-bottom: 4px;
 }
 
-.hint {
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin-top: -8px;
-}
-
 .field {
   margin-bottom: 18px;
 }
