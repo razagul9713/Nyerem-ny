@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, "public");
 const DATA_DIR = path.join(__dirname, "data");
 const DATA_FILE = path.join(DATA_DIR, "submissions.json");
-const QUESTION_COUNT = 10;
+const QUESTION_COUNT = 3;
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",

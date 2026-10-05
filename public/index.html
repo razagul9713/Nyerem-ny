@@ -45,7 +45,7 @@
 
       <!-- 1 -->
       <fieldset class="question" data-question="1">
-        <legend>1. Milyen gyakran mosod az autódat? <span class="required">*</span></legend>
+        <legend>1. Milyen gyakran mosod illetve takarítod az autódat? <span class="required">*</span></legend>
         <label><input type="radio" name="q1" value="Hetente" required> Hetente</label>
         <label><input type="radio" name="q1" value="Havonta 1-2 alkalommal"> Havonta 1-2 alkalommal</label>
         <label><input type="radio" name="q1" value="Néhány havonta"> Néhány havonta</label>
@@ -55,7 +55,7 @@
 
       <!-- 2 -->
       <fieldset class="question" data-question="2">
-        <legend>2. Hol szoktad mosni az autódat? <span class="required">*</span></legend>
+        <legend>2. Hol szoktad mosni illetve takarítani az autódat? <span class="required">*</span></legend>
         <label><input type="radio" name="q2" value="Önkiszolgáló autómosó" required> Önkiszolgáló autómosó</label>
         <label><input type="radio" name="q2" value="Gépi autómosó"> Gépi autómosó</label>
         <label><input type="radio" name="q2" value="Autókozmetikába viszem"> Autókozmetikába viszem</label>
@@ -65,82 +65,12 @@
 
       <!-- 3 -->
       <fieldset class="question" data-question="3">
-        <legend>3. Mennyit költesz átlagosan egy autómosásra alkalmanként? <span class="required">*</span></legend>
+        <legend>3. Mennyit költesz átlagosan autómosásra és takarításra alkalmanként? <span class="required">*</span></legend>
         <label><input type="radio" name="q3" value="0-2000 Ft" required> 0-2000 Ft</label>
         <label><input type="radio" name="q3" value="2000-5000 Ft"> 2000-5000 Ft</label>
         <label><input type="radio" name="q3" value="5000-10000 Ft"> 5000-10000 Ft</label>
         <label><input type="radio" name="q3" value="10000 Ft felett"> 10000 Ft felett</label>
         <p class="error" data-error-for="q3"></p>
-      </fieldset>
-
-      <!-- 4 -->
-      <fieldset class="question" data-question="4">
-        <legend>4. Milyen gyakran szoktad belül takarítani az autódat? <span class="required">*</span></legend>
-        <label><input type="radio" name="q4" value="Hetente" required> Hetente</label>
-        <label><input type="radio" name="q4" value="Havonta 1-2 alkalommal"> Havonta 1-2 alkalommal</label>
-        <label><input type="radio" name="q4" value="Néhány havonta"> Néhány havonta</label>
-        <label><input type="radio" name="q4" value="Csak ha nagyon szükséges"> Csak ha nagyon szükséges</label>
-        <p class="error" data-error-for="q4"></p>
-      </fieldset>
-
-      <!-- 5 -->
-      <fieldset class="question" data-question="5">
-        <legend>5. Hol szoktad belül takarítani az autódat? <span class="required">*</span></legend>
-        <label><input type="radio" name="q5" value="Önkiszolgáló autómosó" required> Önkiszolgáló autómosó</label>
-        <label><input type="radio" name="q5" value="Gépi autómosó"> Gépi autómosó</label>
-        <label><input type="radio" name="q5" value="Autókozmetikába viszem"> Autókozmetikába viszem</label>
-        <label><input type="radio" name="q5" value="Otthon saját magamnak"> Otthon saját magamnak</label>
-        <p class="error" data-error-for="q5"></p>
-      </fieldset>
-
-      <!-- 6 -->
-      <fieldset class="question" data-question="6">
-        <legend>6. Mennyit költesz átlagosan belső takarításra alkalmanként? <span class="required">*</span></legend>
-        <label><input type="radio" name="q6" value="0-2000 Ft" required> 0-2000 Ft</label>
-        <label><input type="radio" name="q6" value="2000-5000 Ft"> 2000-5000 Ft</label>
-        <label><input type="radio" name="q6" value="5000-10000 Ft"> 5000-10000 Ft</label>
-        <label><input type="radio" name="q6" value="10000 Ft felett"> 10000 Ft felett</label>
-        <p class="error" data-error-for="q6"></p>
-      </fieldset>
-
-      <!-- 7 -->
-      <fieldset class="question" data-question="7">
-        <legend>7. Honnan szerzed be az autóápolási termékeket az autódhoz? <span class="required">*</span></legend>
-        <label><input type="radio" name="q7" value="Weben rendelek" required> Weben rendelek</label>
-        <label><input type="radio" name="q7" value="Minőségi termékeket vásárolok autóápolási szaküzletben"> Minőségi termékeket vásárolok autóápolási szaküzletben</label>
-        <label><input type="radio" name="q7" value="Olcsóbb termékeket vásárolok áruházláncok polcairól"> Olcsóbb termékeket vásárolok áruházláncok polcairól</label>
-        <label><input type="radio" name="q7" value="Nem használok autókozmetikai termékeket"> Nem használok autókozmetikai termékeket</label>
-        <p class="error" data-error-for="q7"></p>
-      </fieldset>
-
-      <!-- 8 -->
-      <fieldset class="question" data-question="8">
-        <legend>8. Fontos-e számodra a környezetbarát (víztakarékos, vegyszermentes) autómosás? <span class="required">*</span></legend>
-        <label><input type="radio" name="q8" value="Igen, nagyon fontos" required> Igen, nagyon fontos</label>
-        <label><input type="radio" name="q8" value="Kicsit számít"> Kicsit számít</label>
-        <label><input type="radio" name="q8" value="Nem igazán számít"> Nem igazán számít</label>
-        <label><input type="radio" name="q8" value="Nem foglalkozom vele"> Nem foglalkozom vele</label>
-        <p class="error" data-error-for="q8"></p>
-      </fieldset>
-
-      <!-- 9 -->
-      <fieldset class="question" data-question="9">
-        <legend>9. Szoktál-e előre időpontot foglalni autómosásra/kozmetikára? <span class="required">*</span></legend>
-        <label><input type="radio" name="q9" value="Igen, mindig" required> Igen, mindig</label>
-        <label><input type="radio" name="q9" value="Igen, ha van rá lehetőség"> Igen, ha van rá lehetőség</label>
-        <label><input type="radio" name="q9" value="Nem, csak beugrom"> Nem, csak beugrom</label>
-        <label><input type="radio" name="q9" value="Nem tudtam, hogy lehet"> Nem tudtam, hogy lehet</label>
-        <p class="error" data-error-for="q9"></p>
-      </fieldset>
-
-      <!-- 10 -->
-      <fieldset class="question" data-question="10">
-        <legend>10. Honnan értesülsz szívesen egy autókozmetika akcióiról? <span class="required">*</span></legend>
-        <label><input type="radio" name="q10" value="Közösségi média (Facebook, Instagram)" required> Közösségi média (Facebook, Instagram)</label>
-        <label><input type="radio" name="q10" value="E-mail hírlevél"> E-mail hírlevél</label>
-        <label><input type="radio" name="q10" value="Ismerős ajánlása"> Ismerős ajánlása</label>
-        <label><input type="radio" name="q10" value="Helyszíni plakát, szórólap"> Helyszíni plakát, szórólap</label>
-        <p class="error" data-error-for="q10"></p>
       </fieldset>
     </section>
 
@@ -148,7 +78,7 @@
       <div class="field checkbox-field">
         <label>
           <input type="checkbox" id="privacy" name="privacy" required />
-          Elolvastam és elfogadom az <button type="button" class="link-button" id="open-privacy">adatvédelmi tájékoztatót</button>. <span class="required">*</span>
+          <span>Elolvastam és elfogadom az <button type="button" class="link-button" id="open-privacy">adatvédelmi tájékoztatót</button>. <span class="required">*</span></span>
         </label>
         <p class="error" data-error-for="privacy"></p>
       </div>
@@ -170,8 +100,8 @@
     </div>
     <div class="privacy-dialog-body">
     <p>
-      Jelen tájékoztató a <strong>[CÉGNÉV]</strong> (a továbbiakban: „Szervező" vagy „Adatkezelő")
-      által szervezett „[NYEREMÉNYJÁTÉK NEVE]" elnevezésű nyereményjátékkal (a továbbiakban:
+      Jelen tájékoztató a <strong>Nyirtb Kft.</strong> (a továbbiakban: „Szervező" vagy „Adatkezelő")
+      által szervezett „SAMAN10" elnevezésű nyereményjátékkal (a továbbiakban:
       „Nyereményjáték") összefüggő személyesadat-kezelésről nyújt tájékoztatást az Európai
       Parlament és a Tanács (EU) 2016/679 rendelete (általános adatvédelmi rendelet, „GDPR"), és az
       információs önrendelkezési jogról és az információszabadságról szóló 2011. évi CXII. törvény
@@ -180,12 +110,12 @@
 
     <h3>1. Az adatkezelő adatai</h3>
     <ul>
-      <li>Név: [CÉGNÉV]</li>
-      <li>Székhely: [SZÉKHELY CÍME]</li>
-      <li>Cégjegyzékszám: [CÉGJEGYZÉKSZÁM]</li>
-      <li>Adószám: [ADÓSZÁM]</li>
-      <li>E-mail: [KAPCSOLATI E-MAIL]</li>
-      <li>Telefon: [KAPCSOLATI TELEFONSZÁM]</li>
+      <li>Név: Nyirtb Kft.</li>
+      <li>Székhely: 4400 Nyíregyháza, Bencs László utca 19.</li>
+      <li>Cégjegyzékszám: 15-09-082054</li>
+      <li>Adószám: 24982520-2-15</li>
+      <li>E-mail: autobirodalom@gmail.com</li>
+      <li>Telefon: +36 70 622-2030</li>
     </ul>
 
     <h3>2. A kezelt személyes adatok köre</h3>
@@ -217,7 +147,7 @@
     <h3>5. Az adatkezelés időtartama</h3>
     <p>
       A Szervező a megadott személyes adatokat a Nyereményjáték lezárását és a nyertes(ek) részére
-      történő nyeremény átadását követő [MEGŐRZÉSI IDŐ, pl. 30 nap]-ig kezeli, ezt követően azokat
+      történő nyeremény átadását követő 30 napig kezeli, ezt követően azokat
       törli — kivéve, ha jogszabály ettől eltérő megőrzési kötelezettséget ír elő (pl. számviteli
       bizonylathoz kapcsolódó adat esetén 8 év).
     </p>
@@ -234,8 +164,8 @@
     <h3>7. A nyertes nyilvánosságra hozatala</h3>
     <p>
       Nyertesség esetén a Szervező a nyertes nevét a weboldalán és/vagy közösségimédia-felületén
-      közzéteheti. Amennyiben az érintett ehhez nem járul hozzá, kérjük, jelezze ezt a
-      [KAPCSOLATI E-MAIL] címen a nyeremény átvétele előtt.
+      közzéteheti. Amennyiben az érintett ehhez nem járul hozzá, kérjük, jelezze ezt az
+      autobirodalom@gmail.com címen a nyeremény átvétele előtt.
     </p>
 
     <h3>8. Az érintett jogai</h3>
@@ -249,7 +179,7 @@
       <li>hozzájárulását bármikor, indokolás nélkül visszavonni.</li>
     </ul>
     <p>
-      A jogok gyakorlásával kapcsolatos kérelmeket a [KAPCSOLATI E-MAIL] címre lehet benyújtani. A
+      A jogok gyakorlásával kapcsolatos kérelmeket az autobirodalom@gmail.com címre lehet benyújtani. A
       Szervező a kérelmet a beérkezésétől számított legfeljebb 1 hónapon belül teljesíti.
     </p>
 

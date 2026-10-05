@@ -2,7 +2,7 @@
   const form = document.getElementById("entry-form");
   const submitBtn = document.getElementById("submit-btn");
   const statusEl = document.getElementById("form-status");
-  const QUESTION_COUNT = 10;
+  const QUESTION_COUNT = 3;
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const privacyDialog = document.getElementById("privacy-dialog");
